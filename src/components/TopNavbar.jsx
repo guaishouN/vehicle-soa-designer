@@ -91,35 +91,12 @@ const TopNavbar = ({ onNewProject, onOpenProject, onSave, onExport, onImport, on
       position: 'relative',
       zIndex: 1000,
     }}>
-      <div style={{ 
-        fontWeight: '600', 
-        fontSize: '15px', 
-        marginRight: '48px', 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '12px',
-        color: '#24292f',
-        letterSpacing: '0.3px',
-      }}>
-        <span style={{ color: '#0969da', fontWeight: '700' }}>深圳德赛西威</span>
-        <span style={{ color: '#24292f' }}>整车SOA设计平台</span>
-        <span style={{ 
-          fontSize: '11px', 
-          fontWeight: '600',
-          background: 'linear-gradient(135deg, #0969da, #1f883d)',
-          color: 'white',
-          padding: '2px 8px',
-          borderRadius: '12px',
-          marginLeft: '8px',
-        }}>BETA</span>
-      </div>
 
       <div style={{ display: 'flex', gap: '2px', flex: 1, alignItems: 'center' }}>
         {Object.entries(menuItems).map(([key, menu]) => (
           <div key={key} style={{ position: 'relative' }}>
             <button
               onClick={() => toggleMenu(key)}
-              onMouseEnter={() => setActiveMenu(key)}
               style={{
                 background: activeMenu === key ? 'rgba(234, 238, 242, 0.8)' : 'transparent',
                 border: 'none',
@@ -218,18 +195,6 @@ const TopNavbar = ({ onNewProject, onOpenProject, onSave, onExport, onImport, on
         paddingLeft: '16px',
         borderLeft: '1px solid #d0d7de',
       }}>
-        <div style={{ 
-          fontSize: '11px', 
-          color: '#656d76', 
-          fontFamily: 'ui-monospace, monospace',
-          padding: '4px 10px',
-          background: '#f6f8fa',
-          borderRadius: '6px',
-          border: '1px solid #d0d7de',
-          fontWeight: '600',
-        }}>
-          v1.0.0
-        </div>
       </div>
     </div>
   );
